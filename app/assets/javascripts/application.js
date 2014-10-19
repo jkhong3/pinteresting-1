@@ -15,3 +15,40 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var slides, slides_total, slide_current;
+
+function changePicture (slide) {
+	for(var i=0; i < slides_total; i++) {
+		slides[i].style.display = 'none';
+	}
+	slides[slide].style.display = 'block';
+};
+
+//You need to use javascript to be able to get the buttons to do different things
+
+document.addEventListener('DOMContentLoaded', function() {
+	slides = document.getElementsByClassName('col-sm-12');
+	slides_total = slides.length;
+	slide_current = 0; 
+	// zero is the first item in the array
+	changePicture(slide_current);
+	
+	window.setInterval(function(){
+		if(slide_current >= (slides_total - 1)) {
+			slide_current=0;
+		} else {
+			slide_current++;
+		} //adds one to the current slide, makes it next slide
+	changePicture(slide_current);
+	console.log(slide_current);
+	},2000); //miliseconds how fast it changes
+
+document.getElementsByClassName('next')[0]	
+	.addEventListener("click", function(){
+		console.log("Frog");
+	});
+});
+
+
+
