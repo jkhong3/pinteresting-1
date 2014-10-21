@@ -45,10 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	},2000); //miliseconds how fast it changes
 });
 
-document.getElementsByClassName('next')[0]	
-	.addEventListener("click", function(){
-		console.log("Frog");
-});
 
 // This is for the prev button (below)
 
