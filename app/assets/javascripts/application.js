@@ -43,12 +43,43 @@ document.addEventListener('DOMContentLoaded', function() {
 	changePicture(slide_current);
 	console.log(slide_current);
 	},2000); //miliseconds how fast it changes
+});
 
 document.getElementsByClassName('next')[0]	
 	.addEventListener("click", function(){
 		console.log("Frog");
-	});
 });
 
+// This is for the prev button (below)
 
+document.getElementsByClassName('prev')[0]
+	.addEventListener("click", function(){
+		if(slide_current > 0){
+			slide_current--;
+		}else{
+			slide_current=(slides_total-1);
+		}
+		changePicture(slide_current);
+});
 
+// This is for the next button (below)
+
+document.getElementsByClassName('next')[0]
+	.addEventListener("click", function(){
+		if(slide_current >=0){
+			slide_current++;
+		}else{
+			slide_current=(slides_total-1);
+		}
+		changePicture(slide_current);
+});
+
+// This is for the reset button (below)
+
+document.getElementsByClassName('reset')[0]
+	.addEventListener("click", function(){
+		if(slide_current >=0){
+			slide_current=0;
+		}
+		changePicture(slide_current);
+	});
