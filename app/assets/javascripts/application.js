@@ -17,17 +17,51 @@
 //= require_tree .
 
 var slides, slides_total, slide_current;
-
-function changePicture (slide) {
-	for(var i=0; i < slides_total; i++) {
-		slides[i].style.display = 'none';
-	}
-	slides[slide].style.display = 'block';
-};
-
 //You need to use javascript to be able to get the buttons to do different things
 
 document.addEventListener('DOMContentLoaded', function() {
+
+// This is for the prev button (below)
+	document.getElementsByClassName('prev')[0]
+		.addEventListener("click", function(){
+		if(slide_current > 0){
+			slide_current--;
+				}else{
+			slide_current=(slides_total-1);
+		}
+			changePicture(slide_current);
+	});
+
+// This is for the next button (below)
+	document.getElementsByClassName('next')[0]
+		.addEventListener("click", function(){
+		if(slide_current<(slides_total-1)){
+			slide_current++;
+				}else{
+			slide_current=0;
+		}
+			changePicture(slide_current);
+	});
+
+// This is for the reset button (below)
+	document.getElementsByClassName('reset')[0]
+		.addEventListener("click", function(){
+		if(slide_current >=0){
+			slide_current=0;
+			}
+			changePicture(slide_current);
+	});
+
+
+
+
+	function changePicture (slide) {
+		for(var i=0; i < slides_total; i++) {
+			slides[i].style.display = 'none';
+		};
+		slides[slide].style.display = 'block';
+	};
+
 	slides = document.getElementsByClassName('col-sm-12');
 	slides_total = slides.length;
 	slide_current = 0; 
@@ -40,42 +74,13 @@ document.addEventListener('DOMContentLoaded', function() {
 		} else {
 			slide_current++;
 		} //adds one to the current slide, makes it next slide
-	changePicture(slide_current);
-	console.log(slide_current);
+		changePicture(slide_current);
+		console.log(slide_current);
 	},2000); //miliseconds how fast it changes
 });
 
 
-// This is for the prev button (below)
 
-document.getElementsByClassName('prev')[0]
-	.addEventListener("click", function(){
-		if(slide_current > 0){
-			slide_current--;
-		}else{
-			slide_current=(slides_total-1);
-		}
-		changePicture(slide_current);
-});
 
-// This is for the next button (below)
 
-document.getElementsByClassName('next')[0]
-	.addEventListener("click", function(){
-		if(slide_current >=0){
-			slide_current++;
-		}else{
-			slide_current=(slides_total-1);
-		}
-		changePicture(slide_current);
-});
 
-// This is for the reset button (below)
-
-document.getElementsByClassName('reset')[0]
-	.addEventListener("click", function(){
-		if(slide_current >=0){
-			slide_current=0;
-		}
-		changePicture(slide_current);
-	});
