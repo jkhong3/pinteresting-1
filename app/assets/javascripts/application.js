@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // This is for the prev button (below)
 	document.getElementsByClassName('prev')[0]
 		.addEventListener("click", function(){
-		if(slide_current > 0){
+		if(slide_current>0){
 			slide_current--;
 				}else{
-			slide_current=(slides_total-1);
+			slide_current=3;
 		}
 			changePicture(slide_current);
 	});
