@@ -41,7 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
 			slide_current=0;
 		}
 			changePicture(slide_current);
+			ga("send", "event", "slider", "clicknext", "click the next button", 1);
 	});
+// ga is google analytics
+
 
 // This is for the reset button (below)
 	document.getElementsByClassName('reset')[0]
