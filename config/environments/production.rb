@@ -76,4 +76,9 @@ config.assets.precompile += %w(.svg .eot .woff .ttf)
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #required for Heroku
+  #note to set to actual host name
+  config.action_mailer.default_url_options = { :host => 'http://cataraiana-pinteresting.herokuapp.com/' }
+
 end

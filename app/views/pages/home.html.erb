@@ -1,7 +1,19 @@
 <div class="jumbotron center"> <!-- This makes a grey background, it's really nice. the center in here makes everything centered -->
 
 	<h1>Welcome</h1>
-	<p>You're in Pinteresting, the most interesting Pinterest ever!</p>
-	<p> <%= link_to "Log In", "#", class: "btn btn-default" %>
-	<%= link_to "Sign Up", "#", class: "btn btn-primary" %></p> <!-- btn makes it into a button! -->
+
+	<% if user_signed_in? %>
+		# do sometihng
+	<% else %>
+
+
+	<p>You're in Pinteresting, the most interesting Pinterest ever! </p>
+
+	<p>
+
+		<%= link_to"Log in", new_user_session_path, class: "btn btn-default" %>
+		<%= link_to"Sign up", new_user_registration_path, class: "btn btn-primary" %>
+	</p>
+
+	<% end %>
 </div>

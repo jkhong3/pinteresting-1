@@ -11,6 +11,9 @@
 	<%= render 'layouts/header' %> <!-- This is the header, but if you want to customize it, you'll need to access the header file -->
 
 	<div class="container">
+	<% flash.each do |name, msg| %>
+			<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+		<% end %>
 		<%= yield %>
 	</div>
 </body>
