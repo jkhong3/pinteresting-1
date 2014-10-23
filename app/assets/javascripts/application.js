@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		if(slide_current>0){
 			slide_current--;
 				}else{
-			slide_current=3;
+			slide_current=9;
 		}
 			changePicture(slide_current);
 	});
