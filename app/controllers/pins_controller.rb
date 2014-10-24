@@ -1,4 +1,5 @@
 class PinsController < ApplicationController
+  respond_to :html, :xml, :json #This was not part of the video but it was needed to make it run
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
   def index
