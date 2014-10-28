@@ -3,7 +3,7 @@ class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
   def index
-    @pins = Pin.all
+    @pins = Pin.all 
     respond_with(@pins)
   end
 
@@ -22,7 +22,7 @@ class PinsController < ApplicationController
   def create
     @pin = Pin.new(pin_params)
     @pin.save
-    respond_with(@pin)
+    respond_with(@pin)  
   end
 
   def update
