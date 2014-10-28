@@ -25,6 +25,7 @@ gem 'devise', '~> 3.4.0'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 # this is the one recommended by Lynn
 
+
 group :development, :test do
 	gem 'sqlite3'
 end
@@ -32,6 +33,8 @@ end
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
+	gem 'aws-sdk', '~> 1.20.0'
+
 end
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
