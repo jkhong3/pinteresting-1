@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<%= image_tag @pin.image.url(:medium) %>
+ <!-- This is to show the image in our site -->
 <p>
   <strong>Description:</strong>
   <%= @pin.description %>
