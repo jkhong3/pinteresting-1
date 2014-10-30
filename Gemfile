@@ -33,9 +33,9 @@ end
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
-	gem 'aws-sdk', '~> 1.20.0'
-
 end
+
+gem 'aws-sdk', '~> 1.20.0'
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
