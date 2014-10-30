@@ -17,13 +17,17 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+#related to turbolinks
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'devise', '~> 3.4.0'
-
-gem 'paperclip', github: 'thoughtbot/paperclip'
 # this is the one recommended by Lynn
+gem 'paperclip', github: 'thoughtbot/paperclip'
+#this is the masonry gem
+gem 'masonry-rails', '~> 0.2.0'
+
 
 
 group :development, :test do

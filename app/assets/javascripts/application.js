@@ -13,7 +13,9 @@
 //= require jquery
 //= require bootstrap
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
+//= require masonry/jquery.masonry
 //= require_tree .
 
 var slides, slides_total, slide_current;
@@ -54,8 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 			changePicture(slide_current);
 	});
-
-
 
 
 	function changePicture (slide) {
