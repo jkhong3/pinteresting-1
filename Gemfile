@@ -27,8 +27,10 @@ gem 'devise', '~> 3.4.0'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 #this is the masonry gem
 gem 'masonry-rails', '~> 0.2.0'
-
-
+#this gem makes us able to 
+gem 'will_paginate', '~> 3.0.5'
+#make pages pretty
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
 	gem 'sqlite3'
