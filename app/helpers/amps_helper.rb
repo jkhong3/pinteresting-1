@@ -1,0 +1,2 @@
+module AmpsHelper
+end

@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: MyString
+  yelpid: MyString
+  image_url: MyString
+  url: MyString
+  mobile_url: MyString
+  display_phone: MyString
+  review_count: 1
+  rating: 1
+  rating_img_url: MyString
+  rating_img_url_small: MyString
+  snippet_text: MyString
+  snippet_image_url: MyString
+  location.display_address: MyString
+  location.address: MyString
+  location.city: MyString
+  location.state_code: MyString
+  location.postal_code: MyString
+  reviews.rating_image_url: MyString
+  review.rating_image_small_url: MyString
+  reviews.excerpt: MyString
+  reviews.user.image_url: MyString
+  reviews.user.name: MyString
+
+two:
+  name: MyString
+  category: MyString
+  yelpid: MyString
+  image_url: MyString
+  url: MyString
+  mobile_url: MyString
+  display_phone: MyString
+  review_count: 1
+  rating: 1
+  rating_img_url: MyString
+  rating_img_url_small: MyString
+  snippet_text: MyString
+  snippet_image_url: MyString
+  location.display_address: MyString
+  location.address: MyString
+  location.city: MyString
+  location.state_code: MyString
+  location.postal_code: MyString
+  reviews.rating_image_url: MyString
+  review.rating_image_small_url: MyString
+  reviews.excerpt: MyString
+  reviews.user.image_url: MyString
+  reviews.user.name: MyString
